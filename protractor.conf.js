@@ -1,6 +1,7 @@
 exports.config = {
   framework: 'jasmine',
   troubleshoot: true,
+   seleniumAddress: 'http://54.200.220.9:4444/wd/hub',
   baseUrl: 'http://localhost:9000',
   specs: 'test/e2e/**/*.js',
   getPageTimeout: 20000,
