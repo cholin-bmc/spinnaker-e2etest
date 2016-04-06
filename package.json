@@ -7,7 +7,8 @@
     "url": "https://github.com/cholin-bmc/spinnaker-e2etest.git"
   },
   "dependencies": {
-   "angular": "~1.5.0"
+    "angular": "~1.5.0",
+    "jasmine-reporters": "^2.1.1"
   },
   "engines": {
     "node": ">=0.10.0",

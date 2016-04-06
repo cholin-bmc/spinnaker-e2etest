@@ -1,5 +1,5 @@
 exports.config = {
-  framework: 'jasmine',
+  framework: 'jasmine2',
   troubleshoot: true,
 //  seleniumAddress: 'http://localhost:4444/wd/hub',
   baseUrl: 'http://localhost:9000',
@@ -10,6 +10,14 @@ exports.config = {
     'browserName': 'chrome',
   },
   // ----- Options to be passed to minijasminenode -----
+  onPrepare: function() {
+    var jasmineReporters = require('jasmine-reporters');
+    jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+        consolidateAll: true,
+        savePath: 'testresults',
+        filePrefix: 'xmloutput'
+    }));
+  },
   jasmineNodeOpts: {
     // If true, display spec names.
     isVerbose: true,
