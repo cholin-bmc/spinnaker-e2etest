@@ -25,7 +25,7 @@ describe('Applications Landing Page - ', function() {
 
     it('should redirect to /#/applications from /', function() {
       browser.get('/');
-      expect(browser.getCurrentUrl()).toBe('http://localhost:9000/#/infrastructure');
+      expect(browser.getCurrentUrl()).toBe(browser.baseUrl + '/#/infrastructure');
       expect(page.header.getText()).toEqual('Infrastructure Search');
     });
 
